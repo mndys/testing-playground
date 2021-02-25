@@ -1,5 +1,5 @@
-export function add(a, b) {
-  return a + b
+export function add(...numbers) {
+  return numbers.reduce((acc, curr) => acc + curr)
 }
 
 export function subtract(a, b) {
