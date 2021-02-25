@@ -34,6 +34,11 @@ describe('lib/string', () => {
       expect(result).toEqual(['Jane', 'Joe', 'John'])
     })
 
-    it.todo('returns all items in title case ("john" -> "John")')
+    it('returns all items in title case ("john" -> "John")', () => {
+      const result = commaSeparatedToArray(
+        'Jane Jean, John, joe, John, John, jane, joe, Joe, a'
+      )
+      expect(result).toEqual(['Jane', 'Jane Jean', 'Joe', 'John', 'a'])
+    })
   })
 })
